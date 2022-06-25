@@ -4,9 +4,9 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.testing.testApplication
+import soft.santa.dev.plugins.configureRouting
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import soft.santa.dev.plugins.configureRouting
 
 class ApplicationTest {
     @Test
