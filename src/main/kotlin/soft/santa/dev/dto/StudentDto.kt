@@ -1,6 +1,8 @@
 package soft.santa.dev.dto
 
-@kotlinx.serialization.Serializable
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class StudentDto(
     val id: String? = null,
     val name: String

@@ -1,9 +1,9 @@
 db.auth('root', 'example')
 
-db = db.getSiblingDB('sw_society')
+db = db.getSiblingDB('blue_archive')
 
 db.createUser({
-  user: 'mongo_sw',
+  user: 'mongo_ba',
   pwd: 'th1sIsSecr3tOfM0ng0',
   roles: [{
     role: 'dbOwner',

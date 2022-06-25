@@ -33,6 +33,8 @@ dependencies {
     implementation("io.ktor:ktor-server-locations-jvm:$ktorVersion")
     implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
     implementation("io.insert-koin:koin-ktor:$koinVersion")
+    implementation("io.insert-koin:koin-logger-slf4j:$koinVersion")
+    implementation("org.litote.kmongo:kmongo-async:$kmongoVersion")
     implementation("org.litote.kmongo:kmongo-coroutine:$kmongoVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
