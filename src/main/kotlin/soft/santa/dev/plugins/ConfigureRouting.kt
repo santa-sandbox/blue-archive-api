@@ -20,7 +20,7 @@ fun Application.configureRouting() {
             call.respondText("OK")
         }
         get("/students") {
-            val studentList = studentService.findAll().map { Student::toDto }
+            val studentList = studentService.findAll().map(Student::toDto)
 
             call.respond(studentList)
         }

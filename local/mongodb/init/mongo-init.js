@@ -7,7 +7,7 @@ db.createUser({
   pwd: 'th1sIsSecr3tOfM0ng0',
   roles: [{
     role: 'dbOwner',
-    db: 'sw_society',
+    db: 'blue_archive',
   }],
 });
 
