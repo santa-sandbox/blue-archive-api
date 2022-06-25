@@ -25,4 +25,5 @@ db.users.insert({
   email: "admin@swsociety.com",
   roles: [{$ref: "roles", $id: roleAdminId}, {$ref: "roles", $id: roleUserId}]
 });
-db.createCollection("passwordResetTokens", { autoIndexId: true });
+db.createCollection("students", { autoIndexId: true });
+db.students.insert({name: "Aru"});
