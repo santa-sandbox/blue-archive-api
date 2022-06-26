@@ -8,5 +8,5 @@ import org.litote.kmongo.reactivestreams.KMongo
 
 val mongoModule = module(createdAtStart = true) {
     val mongoUri = HoconApplicationConfig(ConfigFactory.load()).property("mongo.uri").getString()
-    single { KMongo.createClient(mongoUri).coroutine }
+    factory { KMongo.createClient(mongoUri).coroutine }
 }
