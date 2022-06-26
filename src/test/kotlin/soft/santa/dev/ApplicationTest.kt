@@ -10,13 +10,13 @@ import kotlin.test.assertEquals
 
 class ApplicationTest {
     @Test
-    fun testRoot() = testApplication {
+    fun testHealthCheck() = testApplication {
         application {
             configureRouting()
         }
-        client.get("/").apply {
+        client.get("/health").apply {
             assertEquals(HttpStatusCode.OK, status)
-            assertEquals("Hello World!", bodyAsText())
+            assertEquals("OK", bodyAsText())
         }
     }
 }

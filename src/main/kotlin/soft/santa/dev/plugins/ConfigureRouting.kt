@@ -13,9 +13,6 @@ import soft.santa.dev.services.StudentService
 fun Application.configureRouting() {
     val studentService = StudentService()
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
         get("/health") {
             call.respondText("OK")
         }
