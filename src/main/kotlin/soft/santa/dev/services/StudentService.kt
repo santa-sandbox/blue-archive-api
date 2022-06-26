@@ -1,16 +1,12 @@
 package soft.santa.dev.services
 
-import com.typesafe.config.ConfigFactory
-import io.ktor.server.config.HoconApplicationConfig
-import org.litote.kmongo.coroutine.coroutine
-import org.litote.kmongo.reactivestreams.KMongo
 import soft.santa.dev.models.Student
+import soft.santa.dev.repo.StudentRepository
 
-class StudentService {
-    private val mongoUri = HoconApplicationConfig(ConfigFactory.load()).property("mongo.uri").getString()
-    private val client = KMongo.createClient(mongoUri).coroutine
-    private val database = client.getDatabase("blue_archive")
-    private val studentCollection = database.getCollection<Student>("students")
+interface StudentService {
+    suspend fun findAll(): List<Student>
+}
 
-    suspend fun findAll(): List<Student> = studentCollection.find().toList()
+class StudentServiceImpl(private val studentRepository: StudentRepository) : StudentService {
+    override suspend fun findAll(): List<Student> = studentRepository.findAll()
 }
