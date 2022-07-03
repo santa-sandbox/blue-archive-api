@@ -38,4 +38,5 @@ out/
 
 .env
 local/mongodb/init/*.json
+local/mongodb/init/*.js
 src/main/resources/version.properties

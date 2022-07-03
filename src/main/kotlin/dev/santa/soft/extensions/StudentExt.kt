@@ -7,6 +7,7 @@ fun Student.toDto(): StudentDto =
     StudentDto(
         id = this.id.toString(),
         name = this.name,
+        baseStar = this.baseStar,
         background = this.background,
         school = this.school,
         playRole = this.playRole,
@@ -38,6 +39,7 @@ fun Student.toDto(): StudentDto =
 fun StudentDto.toStudent(): Student =
     Student(
         name = this.name,
+        baseStar = this.baseStar,
         background = this.background,
         school = this.school,
         playRole = this.playRole,

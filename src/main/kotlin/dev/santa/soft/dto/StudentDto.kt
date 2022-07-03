@@ -15,6 +15,7 @@ import kotlinx.serialization.Serializable
 data class StudentDto(
     val id: String? = null,
     val name: String,
+    val baseStar: Int,
     val background: String,
     val school: School,
     val playRole: PlayRole,

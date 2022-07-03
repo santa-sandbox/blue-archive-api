@@ -16,6 +16,7 @@ data class Student(
     @BsonId
     val id: Id<Student>? = null,
     val name: String,
+    val baseStar: Int,
     val background: String,
     val school: School,
     val playRole: PlayRole,
