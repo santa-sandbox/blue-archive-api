@@ -11,19 +11,33 @@ db.createUser({
   }],
 });
 
-db.createCollection("roles", { autoIndexId: true });
-var roleAdminId = ObjectId();
-db.roles.insert({_id: roleAdminId, name: "ADMIN"});
-var roleUserId = ObjectId();
-db.roles.insert({_id: roleUserId, name: "USER"});
-db.roles.insert({name: "MODERATOR"});
-db.roles.insert({name: "SUBSCRIBED"});
-db.createCollection("users", { autoIndexId: true });
-db.users.insert({
-  username: "admin",
-  password: "$2a$10$6t2JRXUKlSkKgPDA1m8zS.5fvhzgXfhBFo3A6Uu3fgvN5UJ7BUrKu", /* => password: user */
-  email: "admin@ba-fanmade.com",
-  roles: [{$ref: "roles", $id: roleAdminId}, {$ref: "roles", $id: roleUserId}]
-});
 db.createCollection("students", { autoIndexId: true });
-db.students.insert({name: "Aru"});
+db.students.insert({
+  name: "Aru",
+  background: "Gehenna Academy's self-appointed president of Handyman 68, conducts all sorts of illegal business as she pleases.\nWhile Aru considers herself to be a cool outlaw, she often falls out of character and thus any appearance disparities are easily revealed.",
+  school: "GEHENNA",
+  playRole: "ATTACKER",
+  position: "BACK",
+  attackType: "EXPLOSIVE",
+  armorType: "LIGHT",
+  combatClass: "STRIKER",
+  affinity: {urban: "S", Outdoors: "B", Indoors: "D"},
+  weaponType: "SR",
+  equip1: "HAT",
+  equip2: "HAIRPIN",
+  equip3: "WATCH",
+  fullName: "Rikuhachima Aru",
+  age: 16,
+  birthday: "03/12",
+  height: 160,
+  hobbies: "Studying management",
+  illustrator: "DoReMi",
+  voiceActress: "Kondō Reina",
+  releaseDate: "2021/02/04",
+  stats: null,
+  bonusAffection: null,
+  skills: null,
+  uniqueWeapon: null,
+  cafeFurniture: null,
+  gifts: null,
+});
