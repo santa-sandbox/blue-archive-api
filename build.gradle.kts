@@ -3,6 +3,8 @@ val kotlinVersion: String by project
 val logbackVersion: String by project
 val koinVersion: String by project
 val kmongoVersion: String by project
+val striktVersion: String by project
+
 val ktlint: Configuration by configurations.creating
 
 val outputDir = "${project.buildDir}/reports/ktlint/"
@@ -56,4 +58,6 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
     testImplementation("io.insert-koin:koin-test:$koinVersion")
+    testImplementation("io.strikt:strikt-core:$striktVersion")
+    testImplementation("io.strikt:strikt-mockk:$striktVersion")
 }
