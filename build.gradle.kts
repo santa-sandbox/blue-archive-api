@@ -21,7 +21,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.7.0"
 }
 
-group = "soft.santa.dev"
+group = "dev.santa.soft"
 version = "0.0.1"
 application {
     mainClass.set("io.ktor.server.netty.EngineMain")

@@ -1,1 +1,1 @@
-rootProject.name = "soft.santa.dev.blue-archive-api"
+rootProject.name = "dev.santa.soft.blue-archive-api"
