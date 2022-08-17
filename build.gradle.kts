@@ -55,6 +55,7 @@ dependencies {
     implementation("org.litote.kmongo:kmongo-async:$kmongoVersion")
     implementation("org.litote.kmongo:kmongo-coroutine:$kmongoVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
+    implementation("org.quartz-scheduler:quartz:2.3.2")
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
     testImplementation("io.insert-koin:koin-test:$koinVersion")
